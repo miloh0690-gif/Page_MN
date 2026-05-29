@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Company - Tecnología a tu Alcance</title>
+    <!-- Importamos Tailwind CSS desde su servidor oficial para el diseño visual -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuración personalizada de colores para el estilo "Neural e Innovador" de Moon Company
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        espacioProfundo: '#0B0F19', // Fondo oscuro premium
+                        redNeural: '#3B82F6',       // Azul tecnológico brillante
+                        neonExito: '#10B981'        // Verde confianza para botones de compra
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-espacioProfundo text-gray-100 font-sans min-h-screen">
+
+    <!-- CABECERA DE LA TIENDA (Navbar) -->
+    <header class="border-b border-gray-800 bg-opacity-50 backdrop-blur-md sticky top-0 z-50 bg-espacioProfundo">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo con concepto Neural/Tecnológico -->
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-redNeural to-purple-500">
+                    MOON COMPANY
+                </span>
+                <span class="text-xs bg-gray-800 text-redNeural px-2 py-0.5 rounded-full font-mono">NEURAL v1.0</span>
+            </div>
+            
+            <!-- Indicador de envíos a nivel nacional -->
+            <div class="text-xs md:text-sm text-gray-400 flex items-center space-x-2">
+                <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neonExito opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-neonExito"></span>
+                </span>
+                <span>Envíos a todo el país | <strong class="text-white">Entregas Gratis</strong> según región</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO (Inspiración y Confianza) -->
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <section class="text-center mb-16 space-y-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+                Conectando el Futuro con tus <span class="text-redNeural">Objetivos</span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
+                Equipos tecnológicos de alta gama seleccionados con precisión quirúrgica. Garantía real, velocidad de respuesta y distribución nacional automatizada.
+            </p>
+            <div class="h-1 w-20 bg-gradient-to-r from-redNeural to-purple-500 mx-auto rounded-full"></div>
+        </section>
+
+        <!-- SECCIÓN DEL CATÁLOGO (Vista Previa de Productos Maquetados) -->
+        <section>
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-xl md:text-2xl font-bold tracking-wide flex items-center space-x-2">
+                    <span class="w-2 h-6 bg-redNeural rounded-full inline-block"></span>
+                    <span>Catálogo de Equipos</span>
+                </h2>
+                <!-- Filtro rápido para el cliente -->
+                <span class="text-xs bg-gray-800 text-gray-300 px-3 py-1.5 rounded-lg border border-gray-700">
+                    Mostrando: Todos los productos
+                </span>
+            </div>
+
+            <!-- Grilla de Productos (3 columnas estables en pantallas grandes) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- PRODUCTO 1: Demostración de Teléfono de Gama Alta -->
+                <div class="bg-gray-900 bg-opacity-40 rounded-2xl p-6 border border-gray-800 hover:border-redNeural transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="bg-gray-800 rounded-xl h-48 flex items-center justify-center text-gray-500 mb-4 font-mono text-xs relative overflow-hidden">
+                            <!-- Simulación de Imagen Neural -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-redNeural/10"></div>
+                            [ Vista Previa del Smartphone ]
+                        </div>
+                        <span class="text-xs font-bold text-redNeural uppercase tracking-widest">Premium Mobile</span>
+                        <h3 class="text-lg font-bold mt-1 text-white">Smartphone NextGen Pro</h3>
+                        <p class="text-gray-400 text-xs mt-2 line-clamp-2">
+                            Cámara con sensor avanzado de nivel profesional y pantalla optimizada de alta tasa de refresco. Rendimiento asegurado.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
+                        <div>
+                            <span class="block text-xs text-gray-500">Precio Regular</span>
+                            <span class="text-xl font-extrabold text-white">$ 899</span>
+                        </div>
+                        <button class="bg-redNeural hover:bg-blue-600 text-white font-medium text-xs px-4 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-500/10">
+                            Añadir al Pedido
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 2: Demostración de Laptop / Tablet -->
+                <div class="bg-gray-900 bg-opacity-40 rounded-2xl p-6 border border-gray-800 hover:border-redNeural transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="bg-gray-800 rounded-xl h-48 flex items-center justify-center text-gray-500 mb-4 font-mono text-xs relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-redNeural/10"></div>
+                            [ Vista Previa de Laptop / Tablet ]
+                        </div>
+                        <span class="text-xs font-bold text-redNeural uppercase tracking-widest">Productividad</span>
+                        <h3 class="text-lg font-bold mt-1 text-white">UltraPad Quantum 11</h3>
+                        <p class="text-gray-400 text-xs mt-2 line-clamp-2">
+                            Ideal para desarrollo de software, diseño y gestión empresarial. Autonomía de batería de larga duración.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
+                        <div>
+                            <span class="block text-xs text-gray-500">Precio Regular</span>
+                            <span class="text-xl font-extrabold text-white">$ 1,150</span>
+                        </div>
+                        <button class="bg-redNeural hover:bg-blue-600 text-white font-medium text-xs px-4 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-500/10">
+                            Añadir al Pedido
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 3: Accesorio Tecnológico -->
+                <div class="bg-gray-900 bg-opacity-40 rounded-2xl p-6 border border-gray-800 hover:border-redNeural transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="bg-gray-800 rounded-xl h-48 flex items-center justify-center text-gray-500 mb-4 font-mono text-xs relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-redNeural/10"></div>
+                            [ Vista Previa de Accesorio ]
+                        </div>
+                        <span class="text-xs font-bold text-redNeural uppercase tracking-widest">Audio & Ecosistema</span>
+                        <h3 class="text-lg font-bold mt-1 text-white">Sonic Buds Smart</h3>
+                        <p class="text-gray-400 text-xs mt-2 line-clamp-2">
+                            Cancelación activa de ruido inteligente con sincronización instantánea para ecosistemas Android e iOS.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
+                        <div>
+                            <span class="block text-xs text-gray-500">Precio Regular</span>
+                            <span class="text-xl font-extrabold text-white">$ 149</span>
+                        </div>
+                        <button class="bg-redNeural hover:bg-blue-600 text-white font-medium text-xs px-4 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-500/10">
+                            Añadir al Pedido
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (Footer corporativo que genera confianza) -->
+    <footer class="border-t border-gray-800 mt-24 bg-gray-950 py-8 text-xs text-gray-500 text-center">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p>&copy; 2026 Moon Company. Todos los derechos reservados.</p>
+            <p>Plataforma minorista optimizada para velocidad de distribución nacional.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
