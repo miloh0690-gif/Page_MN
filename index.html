@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon Company - Tecnología a tu Alcance</title>
-    <!-- Importamos Tailwind CSS desde su servidor oficial para el diseño visual -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Configuración personalizada de colores para el estilo "Neural e Innovador" de Moon Company
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        espacioProfundo: '#0B0F19', // Fondo oscuro premium
-                        redNeural: '#3B82F6',       // Azul tecnológico brillante
-                        neonExito: '#10B981'        // Verde confianza para botones de compra
+                        espacioProfundo: '#0B0F19',
+                        redNeural: '#3B82F6',
+                        neonExito: '#10B981'
                     }
                 }
             }
@@ -23,18 +21,15 @@
 </head>
 <body class="bg-espacioProfundo text-gray-100 font-sans min-h-screen">
 
-    <!-- CABECERA DE LA TIENDA (Navbar) -->
     <header class="border-b border-gray-800 bg-opacity-50 backdrop-blur-md sticky top-0 z-50 bg-espacioProfundo">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo con concepto Neural/Tecnológico -->
             <div class="flex items-center space-x-2">
                 <span class="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-redNeural to-purple-500">
                     MOON COMPANY
                 </span>
-                <span class="text-xs bg-gray-800 text-redNeural px-2 py-0.5 rounded-full font-mono">NEURAL v1.0</span>
+                <span class="text-xs bg-gray-800 text-redNeural px-2 py-0.5 rounded-full font-mono">NEURAL v1.1</span>
             </div>
             
-            <!-- Indicador de envíos a nivel nacional -->
             <div class="text-xs md:text-sm text-gray-400 flex items-center space-x-2">
                 <span class="flex h-2 w-2 relative">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neonExito opacity-75"></span>
@@ -45,118 +40,131 @@
         </div>
     </header>
 
-    <!-- SECCIÓN HERO (Inspiración y Confianza) -->
     <main class="max-w-7xl mx-auto px-4 py-12">
         <section class="text-center mb-16 space-y-4">
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
                 Conectando el Futuro con tus <span class="text-redNeural">Objetivos</span>
             </h1>
             <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
-                Equipos tecnológicos de alta gama seleccionados con precisión quirúrgica. Garantía real, velocidad de respuesta y distribución nacional automatizada.
+                Inventario inteligente conectado en tiempo real. Garantía real, velocidad de respuesta y distribución nacional automatizada.
             </p>
             <div class="h-1 w-20 bg-gradient-to-r from-redNeural to-purple-500 mx-auto rounded-full"></div>
         </section>
 
-        <!-- SECCIÓN DEL CATÁLOGO (Vista Previa de Productos Maquetados) -->
         <section>
             <div class="flex justify-between items-center mb-8">
                 <h2 class="text-xl md:text-2xl font-bold tracking-wide flex items-center space-x-2">
                     <span class="w-2 h-6 bg-redNeural rounded-full inline-block"></span>
-                    <span>Catálogo de Equipos</span>
+                    <span>Catálogo Automático</span>
                 </h2>
-                <!-- Filtro rápido para el cliente -->
-                <span class="text-xs bg-gray-800 text-gray-300 px-3 py-1.5 rounded-lg border border-gray-700">
-                    Mostrando: Todos los productos
+                <span id="contador-productos" class="text-xs bg-gray-800 text-gray-300 px-3 py-1.5 rounded-lg border border-gray-700">
+                    Cargando productos...
                 </span>
             </div>
 
-            <!-- Grilla de Productos (3 columnas estables en pantallas grandes) -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- PRODUCTO 1: Demostración de Teléfono de Gama Alta -->
-                <div class="bg-gray-900 bg-opacity-40 rounded-2xl p-6 border border-gray-800 hover:border-redNeural transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="bg-gray-800 rounded-xl h-48 flex items-center justify-center text-gray-500 mb-4 font-mono text-xs relative overflow-hidden">
-                            <!-- Simulación de Imagen Neural -->
-                            <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-redNeural/10"></div>
-                            [ Vista Previa del Smartphone ]
-                        </div>
-                        <span class="text-xs font-bold text-redNeural uppercase tracking-widest">Premium Mobile</span>
-                        <h3 class="text-lg font-bold mt-1 text-white">Smartphone NextGen Pro</h3>
-                        <p class="text-gray-400 text-xs mt-2 line-clamp-2">
-                            Cámara con sensor avanzado de nivel profesional y pantalla optimizada de alta tasa de refresco. Rendimiento asegurado.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
-                        <div>
-                            <span class="block text-xs text-gray-500">Precio Regular</span>
-                            <span class="text-xl font-extrabold text-white">$ 899</span>
-                        </div>
-                        <button class="bg-redNeural hover:bg-blue-600 text-white font-medium text-xs px-4 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-500/10">
-                            Añadir al Pedido
-                        </button>
-                    </div>
+            <div id="contenedor-productos" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="col-span-full text-center py-12 text-gray-500 font-mono text-sm animate-pulse">
+                    Iniciando conexión neural con el inventario...
                 </div>
-
-                <!-- PRODUCTO 2: Demostración de Laptop / Tablet -->
-                <div class="bg-gray-900 bg-opacity-40 rounded-2xl p-6 border border-gray-800 hover:border-redNeural transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="bg-gray-800 rounded-xl h-48 flex items-center justify-center text-gray-500 mb-4 font-mono text-xs relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-redNeural/10"></div>
-                            [ Vista Previa de Laptop / Tablet ]
-                        </div>
-                        <span class="text-xs font-bold text-redNeural uppercase tracking-widest">Productividad</span>
-                        <h3 class="text-lg font-bold mt-1 text-white">UltraPad Quantum 11</h3>
-                        <p class="text-gray-400 text-xs mt-2 line-clamp-2">
-                            Ideal para desarrollo de software, diseño y gestión empresarial. Autonomía de batería de larga duración.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
-                        <div>
-                            <span class="block text-xs text-gray-500">Precio Regular</span>
-                            <span class="text-xl font-extrabold text-white">$ 1,150</span>
-                        </div>
-                        <button class="bg-redNeural hover:bg-blue-600 text-white font-medium text-xs px-4 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-500/10">
-                            Añadir al Pedido
-                        </button>
-                    </div>
-                </div>
-
-                <!-- PRODUCTO 3: Accesorio Tecnológico -->
-                <div class="bg-gray-900 bg-opacity-40 rounded-2xl p-6 border border-gray-800 hover:border-redNeural transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="bg-gray-800 rounded-xl h-48 flex items-center justify-center text-gray-500 mb-4 font-mono text-xs relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-redNeural/10"></div>
-                            [ Vista Previa de Accesorio ]
-                        </div>
-                        <span class="text-xs font-bold text-redNeural uppercase tracking-widest">Audio & Ecosistema</span>
-                        <h3 class="text-lg font-bold mt-1 text-white">Sonic Buds Smart</h3>
-                        <p class="text-gray-400 text-xs mt-2 line-clamp-2">
-                            Cancelación activa de ruido inteligente con sincronización instantánea para ecosistemas Android e iOS.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
-                        <div>
-                            <span class="block text-xs text-gray-500">Precio Regular</span>
-                            <span class="text-xl font-extrabold text-white">$ 149</span>
-                        </div>
-                        <button class="bg-redNeural hover:bg-blue-600 text-white font-medium text-xs px-4 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-500/10">
-                            Añadir al Pedido
-                        </button>
-                    </div>
-                </div>
-
             </div>
         </section>
     </main>
 
-    <!-- PIE DE PÁGINA (Footer corporativo que genera confianza) -->
     <footer class="border-t border-gray-800 mt-24 bg-gray-950 py-8 text-xs text-gray-500 text-center">
         <div class="max-w-7xl mx-auto px-4 space-y-2">
             <p>&copy; 2026 Moon Company. Todos los derechos reservados.</p>
-            <p>Plataforma minorista optimizada para velocidad de distribución nacional.</p>
+            <p>Plataforma minorista optimizada para velocidad de distribución nacional de forma automatizada.</p>
         </div>
     </footer>
 
+    <script>
+        // CONFIGURACIÓN CENTRAL: Coloca aquí el ID de tu Google Sheet
+        const SHEET_ID = 'https://script.google.com/macros/s/AKfycbzi-nvUETQIobVRtffbyRQHnCKwUHNBx46hG9RxKUr2LSlmsrj4W1kY9LUXD4w3vaQC8Q/exec';
+        const SHEET_TITLE = 'Hoja 1'; // Cambiar si tu pestaña inferior tiene otro nombre (ej. "Sheet1")
+        
+        // Convertimos la hoja tradicional en un formato estructurado (CSV/JSON) que la web entienda
+        const URL_CONEXION = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_TITLE)}`;
+
+        // Función encargada de conectarse a internet y descargar los datos
+        async function conectarInventario() {
+            const contenedor = document.getElementById('contenedor-productos');
+            const contador = document.getElementById('contador-productos');
+
+            try {
+                const respuesta = await fetch(URL_CONEXION);
+                if (!respuesta.ok) throw new Error('No se pudo conectar con el inventario de Google.');
+                
+                const datosRaw = await respuesta.text();
+                
+                // Procesamos el formato CSV (Filas y Columnas de texto)
+                const filas = datosRaw.split('\n').map(fila => {
+                    // Limpiamos las comillas que Google Sheets añade automáticamente
+                    return fila.split('","').map(celda => celda.replace(/^"|"$/g, '').trim());
+                });
+
+                // La primera fila (índice 0) son los encabezados: id, nombre, precio, etc.
+                // Filtramos las filas vacías para evitar errores
+                const productos = filas.slice(1).filter(f => f.length > 1 && f[1] !== '');
+
+                // Limpiamos el contenedor para quitar el mensaje de "Cargando..."
+                contenedor.innerHTML = '';
+                contador.textContent = `Mostrando: ${productos.length} dispositivos disponibles`;
+
+                // Recorremos cada producto del Excel y creamos su tarjeta visual
+                productos.forEach(prod => {
+                    // Mapeo según el orden de tus columnas: A=id, B=nombre, C=categoria, D=descripcion, E=precio, F=imagen, G=envio_gratis
+                    const [id, nombre, categoria, descripcion, precio, imagen, envio_gratis] = prod;
+
+                    // Estructura HTML de la tarjeta de producto con diseño premium
+                    const tarjetaHTML = `
+                        <div class="bg-gray-900 bg-opacity-40 rounded-2xl p-6 border border-gray-800 hover:border-redNeural transition-all duration-300 flex flex-col justify-between">
+                            <div>
+                                <div class="bg-gray-800 rounded-xl h-48 flex items-center justify-center mb-4 relative overflow-hidden">
+                                    <img src="${imagen || 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500'}" 
+                                         alt="${nombre}" 
+                                         class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
+                                         onerror="this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500';">
+                                    <div class="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-redNeural/5 pointer-events-none"></div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-bold text-redNeural uppercase tracking-widest">${categoria}</span>
+                                    <span class="text-[10px] bg-gray-800 text-gray-400 px-2 py-0.5 rounded border border-gray-700">ID: ${id}</span>
+                                </div>
+                                <h3 class="text-lg font-bold mt-1 text-white">${nombre}</h3>
+                                <p class="text-gray-400 text-xs mt-2 line-clamp-2">${descripcion}</p>
+                                <p class="text-[11px] text-gray-500 mt-2 font-mono">🚀 Envío gratis en: <span class="text-gray-300">${envio_gratis}</span></p>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
+                                <div>
+                                    <span class="block text-xs text-gray-500">Precio Regular</span>
+                                    <span class="text-xl font-extrabold text-white">$ ${precio}</span>
+                                </div>
+                                <button onclick="añadirAlCarrito('${id}', '${nombre}', ${precio})" class="bg-redNeural hover:bg-blue-600 text-white font-medium text-xs px-4 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-500/10">
+                                    Añadir al Pedido
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    contenedor.innerHTML += tarjetaHTML;
+                });
+
+            } catch (error) {
+                console.error(error);
+                contenedor.innerHTML = `
+                    <div class="col-span-full text-center py-12 text-red-400 font-mono text-sm border border-red-900/30 bg-red-950/10 rounded-2xl">
+                        🚨 Error de sincronización: Asegúrate de que el ID de tu hoja sea correcto y que esté configurada como pública (Modo Lector).
+                    </div>
+                `;
+            }
+        }
+
+        // Función provisional para comprobar los clics (La expandiremos en el siguiente paso)
+        function añadirAlCarrito(id, nombre, precio) {
+            alert(`Añadido al pedido provisional: ${nombre} ($${precio})`);
+        }
+
+        // Ejecutar de forma automática al abrir la página web
+        window.onload = conectarInventario;
+    </script>
 </body>
 </html>
